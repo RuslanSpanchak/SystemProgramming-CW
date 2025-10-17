@@ -1,0 +1,40 @@
+mainprogram
+data
+  int32_t a0, b0, i0, j0, x0;
+start
+{
+  scan(a0);
+  scan(b0);
+
+  a0 -> i0;
+
+  if i0 << (b0 add 1) {
+    {
+      while i0 << (b0 add 1) {
+        print(i0 * i0);
+        i0 add 1 -> i0;
+      }
+    }
+  }
+
+  0 -> x0;
+  1 -> i0;
+
+  if i0 << (a0 add 1) {
+    {
+      while i0 << (a0 add 1) {
+        1 -> j0;
+        if j0 << (b0 add 1) {
+          while j0 << (b0 add 1) {
+            x0 add 1 -> x0;
+            j0 add 1 -> j0;
+          }
+        }
+        i0 add 1 -> i0;
+      }
+    }
+  }
+
+  print(x0);
+}
+end
